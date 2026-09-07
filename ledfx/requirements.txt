@@ -10,4 +10,5 @@
 pkgconfig>=1.5.5
 setuptools>=69.0.3
 wheel>=0.42.0
+aiosendspin>=6.0.5,<7.0.0
 ledfx @ git+https://github.com/LedFx/LedFx.git@90bebef841fc69e6c09220918b8853543a09756b
