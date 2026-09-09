@@ -1,14 +1,11 @@
-# The LedFX engine, pinned to an upstream commit *past* the 2.1.9 release to pick
-# up post-release fixes that matter here - most importantly the Sendspin watchdog
-# no longer forcing a reconnect while the stream is idle (the old "no audio for
-# 20s -> reconnect" churn), plus Sendspin now-playing metadata. Pinned to a SHA
-# for reproducibility; bump it to move forward. ledfx resolves the rest of its
-# deps (numpy, aiosendspin, pyflac, python-mbedtls, ...) with its own pins.
+# The LedFX engine, pinned to an upstream commit past the 2.1.9 release.
+# This commit contains the later Sendspin/audio fixes.
+# Pinned to a SHA for reproducibility; bump it to move forward.
 #
-# Upstream still self-reports version 2.1.9 on this commit; confirm the build via
-# /api/info github_sha (90bebef8...), not the version string.
+# Upstream may still self-report version 2.1.9 on this commit; confirm the
+# actual build via /api/info and github_sha.
 pkgconfig>=1.5.5
 setuptools>=69.0.3
 wheel>=0.42.0
 aiosendspin>=6.0.5,<7.0.0
-ledfx @ git+https://github.com/LedFx/LedFx.git@90bebef841fc69e6c09220918b8853543a09756b
+ledfx @ git+https://github.com/LedFx/LedFx.git@284ec23
